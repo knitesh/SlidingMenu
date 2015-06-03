@@ -20,11 +20,6 @@ article
 
     background-color: #fff;
 
-     background-image: -webkit-linear-gradient(right, rgba(0,0,0,.2) 0%, transparent 100%);
-    background-image:    -moz-linear-gradient(right, rgba(0,0,0,.2) 0%, transparent 100%);
-    background-image:     -ms-linear-gradient(right, rgba(0,0,0,.2) 0%, transparent 100%);
-    background-image:      -o-linear-gradient(right, rgba(0,0,0,.2) 0%, transparent 100%);
-    background-image:         linear-gradient(right, rgba(0,0,0,.2) 0%, transparent 100%);
 }
 
 
@@ -78,6 +73,8 @@ nav:after
     border-color: transparent transparent transparent #765;
 }
 
+/* padding 1 em + 14 em widtj + 1em padding =16 em 
+*/
 nav ul
 {
     width: 14em;
@@ -86,6 +83,9 @@ nav ul
 
     list-style-type: none;
 }
+
+/*for smooth transition*/
+
 article,
 article:after,
 nav,
@@ -98,18 +98,19 @@ nav *
             transition: all 600ms ease;
 }
 
+/*pull the navigation bar out from -16em to 0*/
 nav:hover
 {
     left: 0;
 }
-
+/*slides the article left and rotate it */
 nav:hover ~ article
 {
-    -webkit-transform: translateX(16em) perspective(600px) rotateY(10deg);
-       -moz-transform: translateX(16em) perspective(600px) rotateY(10deg);
-        -ms-transform: translateX(16em) perspective(600px) rotateY(10deg);
-         -o-transform: translateX(16em) perspective(600px) rotateY(10deg);
-            transform: translateX(16em) perspective(600px) rotateY(10deg);
+    -webkit-transform: translateX(16em) perspective(600px) rotateY(30deg);
+       -moz-transform: translateX(16em) perspective(600px) rotateY(40deg);
+        -ms-transform: translateX(16em) perspective(600px) rotateY(50deg);
+         -o-transform: translateX(16em) perspective(600px) rotateY(30deg);
+            transform: translateX(16em) perspective(600px) rotateY(30deg);
 }
 
 nav:hover ~ article:after
